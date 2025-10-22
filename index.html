@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>馬修嚴選優格 - 產品資訊</title>
+    <!-- 載入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 設置 Inter 字體為主要字體，並提供中文 fallback */
+        :root {
+            --font-inter: 'Inter', 'Noto Sans TC', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        body {
+            font-family: var(--font-inter);
+            background-color: #f7fbf8; /* 淺綠白背景 */
+        }
+        .container-card {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .icon-text {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .icon-text svg {
+            margin-right: 0.5rem;
+            color: #4CAF50; /* 綠色圖標 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="max-w-3xl mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- 頂部品牌區塊 -->
+        <header class="text-center py-8 bg-white rounded-xl container-card mb-6">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-[#4CAF50]">
+                Matthew's Choice
+            </h1>
+            <p class="mt-2 text-lg text-gray-600 border-t pt-4 mt-4 mx-8">
+                天然純淨優格，從好菌開始的健康生活
+            </p>
+        </header>
+
+        <!-- 主內容區塊 -->
+        <main class="space-y-8">
+
+            <!-- 1. 優格菌種與效用 -->
+            <section class="bg-white p-6 rounded-xl container-card">
+                <h2 class="text-2xl font-bold mb-4 text-[#2e7d32] border-b pb-2">
+                    <span role="img" aria-label="Microbe">🦠</span> 嚴選優格菌種與其效用
+                </h2>
+                <div class="space-y-3 text-gray-700">
+                    <p>我們的優格富含天然、活性乳酸菌，是您腸道健康的好夥伴。</p>
+
+                    <h3 class="font-semibold text-lg mt-4 text-[#4CAF50]">
+                        活性菌群特色：
+                    </h3>
+                    <ul class="list-none space-y-2 pl-0">
+                        <li class="icon-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                            **多種活性乳酸菌（如L. bulgaricus, S. thermophilus等）**：維持優格天然風味，並提供基礎消化支持。
+                        </li>
+                        <li class="icon-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.76l.23-1.44A2 2 0 0 0 18 16.01V9h-4z"/></svg>
+                            **主要效用**：
+                            <ul class="list-disc pl-8 mt-1 text-sm space-y-1">
+                                <li>幫助維持消化道機能，平衡腸道菌群。</li>
+                                <li>促進新陳代謝，使排便更順暢。</li>
+                                <li>優格發酵過程產生**後生元（Postbiotics）**，營養價值更完整。</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 2. 存放與食用建議 -->
+            <section class="bg-white p-6 rounded-xl container-card">
+                <h2 class="text-2xl font-bold mb-4 text-[#2e7d32] border-b pb-2">
+                    <span role="img" aria-label="Temperature">🌡️</span> 存放與食用建議
+                </h2>
+
+                <div class="space-y-4">
+                    <!-- 存放建議 -->
+                    <div class="border p-4 rounded-lg bg-gray-50">
+                        <h3 class="font-semibold text-lg text-gray-800 flex items-center mb-2">
+                            <span role="img" aria-label="Storage" class="mr-2">🧊</span> 建議存放溫度
+                        </h3>
+                        <p class="text-gray-700">
+                            請務必於 <strong class="text-red-600">冷藏 0°C ~ 7°C</strong> 環境下保存。
+                        </p>
+                        <p class="text-sm text-gray-500 mt-1">
+                            避免陽光直射及劇烈溫度變化，開封後請儘速食用完畢，以確保優格菌的活性與新鮮度。
+                        </p>
+                    </div>
+
+                    <!-- 食用建議 (時間與份量) -->
+                    <div class="border p-4 rounded-lg bg-gray-50">
+                        <h3 class="font-semibold text-lg text-gray-800 flex items-center mb-2">
+                            <span role="img" aria-label="Serving" class="mr-2">🥄</span> 建議食用時間與份數
+                        </h3>
+                        <ul class="list-none space-y-3 pl-0 text-gray-700">
+                            <li>
+                                <strong class="text-blue-600">建議份量</strong>：每日約 <strong class="text-blue-600">100g ~ 150g</strong> (約半碗至一碗)，作為日常保健。
+                            </li>
+                            <li>
+                                <strong class="text-blue-600">建議時機</strong>：
+                                <ul class="list-disc pl-8 mt-1 text-sm space-y-1">
+                                    <li>**飯後 30 分鐘**：有助於消化食物，是補充益生菌的最佳時機。</li>
+                                    <li>**睡前 2 小時**：幫助調整體質，但不宜過晚食用。</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong class="text-blue-600">溫和食用</strong>：若天氣較冷，可將優格從冰箱取出，<strong class="text-orange-600">放置室溫 15-20 分鐘回溫</strong>，或隔水加熱至<strong class="text-orange-600">不超過 53°C</strong>（手摸微溫即可），活性菌種不易死亡，對腸胃更溫和。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. 簡易相關料理食譜 -->
+            <section class="bg-white p-6 rounded-xl container-card">
+                <h2 class="text-2xl font-bold mb-4 text-[#2e7d32] border-b pb-2">
+                    <span role="img" aria-label="Recipe">🍽️</span> 簡易優格創意食譜
+                </h2>
+                <p class="text-gray-700 mb-4">優格不僅可以單吃，還能輕鬆變身美味的早點、主食或醬料！</p>
+
+                <div class="grid md:grid-cols-3 gap-4">
+                    <!-- 食譜 1: 優格水果燕麥杯 -->
+                    <div class="border p-4 rounded-lg bg-green-50/50">
+                        <h3 class="font-bold text-xl text-[#4CAF50] mb-2">1. 優格水果燕麥杯</h3>
+                        <p class="text-sm text-gray-600 mb-2">適合快速早餐或下午茶。</p>
+                        <h4 class="font-semibold text-gray-700">材料 (1 份)：</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-600">
+                            <li>原味優格：150g</li>
+                            <li>即食燕麥/穀物：30g</li>
+                            <li>當季水果（如莓果、香蕉）：適量</li>
+                            <li>蜂蜜/楓糖：少許（可選）</li>
+                        </ul>
+                        <h4 class="font-semibold text-gray-700 mt-2">做法：</h4>
+                        <ol class="list-decimal list-inside text-sm text-gray-600">
+                            <li>在杯中或碗中，依序鋪上優格、燕麥/穀物。</li>
+                            <li>放上切好的水果。</li>
+                            <li>淋上少許蜂蜜即可享用。</li>
+                        </ol>
+                    </div>
+
+                    <!-- 食譜 2: 清爽優格雞肉醃料 -->
+                    <div class="border p-4 rounded-lg bg-green-50/50">
+                        <h3 class="font-bold text-xl text-[#4CAF50] mb-2">2. 清爽優格雞肉醃料</h3>
+                        <p class="text-sm text-gray-600 mb-2">優格能軟化肉質，讓雞肉更嫩滑。</p>
+                        <h4 class="font-semibold text-gray-700">材料：</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-600">
+                            <li>雞胸肉/雞腿肉：200g</li>
+                            <li>原味優格：50g</li>
+                            <li>咖哩粉/蒜粉：1 茶匙</li>
+                            <li>鹽、黑胡椒：適量</li>
+                        </ul>
+                        <h4 class="font-semibold text-gray-700 mt-2">做法：</h4>
+                        <ol class="list-decimal list-inside text-sm text-gray-600">
+                            <li>將所有醃料放入保鮮袋或碗中拌勻。</li>
+                            <li>放入雞肉，冷藏醃製至少 1 小時（過夜更佳）。</li>
+                            <li>取出後以煎、烤、氣炸方式烹調至熟透即可。</li>
+                        </ol>
+                    </div>
+
+                    <!-- 食譜 3: 簡易希臘風優格醬 -->
+                    <div class="border p-4 rounded-lg bg-green-50/50">
+                        <h3 class="font-bold text-xl text-[#4CAF50] mb-2">3. 簡易希臘風優格醬</h3>
+                        <p class="text-sm text-gray-600 mb-2">取代高熱量沙拉醬或美乃滋。</p>
+                        <h4 class="font-semibold text-gray-700">材料：</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-600">
+                            <li>濃稠優格（或希臘優格）：100g</li>
+                            <li>蒜末：少許</li>
+                            <li>檸檬汁：1 茶匙</li>
+                            <li>乾燥蒔蘿或薄荷：少許（可選）</li>
+                            <li>鹽、黑胡椒：適量</li>
+                        </ul>
+                        <h4 class="font-semibold text-gray-700 mt-2">做法：</h4>
+                        <ol class="list-decimal list-inside text-sm text-gray-600">
+                            <li>將所有材料倒入碗中，攪拌均勻。</li>
+                            <li>嚐味道後調整鹹度與酸度。</li>
+                            <li>可搭配生菜沙拉、烤蔬菜、薯條或作為抹醬使用。</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 底部提示區塊 -->
+        <footer class="text-center mt-8 py-4 text-sm text-gray-500 border-t border-gray-300">
+            <p>© Matthew's Choice | 更多產品資訊請參考官方網站</p>
+            <p class="mt-1 text-xs">**以上為一般性優格食用建議，請以產品包裝所示之實際保存期限為準。**</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
