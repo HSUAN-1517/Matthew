@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>馬修嚴選 Matthew's Choice - G+ 優格產品詳情</title>
+    <style>
+        /* --- 全域設定 --- */
+        :root {
+            --brand-primary: #004B44; /* 馬修風格深綠 */
+            --brand-secondary: #C5A065; /* 質感金/米色 */
+            --brand-bg: #F9F9F7; /* 溫潤的米白底色 */
+            --text-dark: #333333;
+            --text-light: #666666;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--brand-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* --- 導覽列 --- */
+        nav {
+            background-color: var(--brand-primary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .hero-img {
+            flex: 1 1 400px;
+            background-color: #ddd;
+            height: 500px;
+            border-radius: 20px;
+            /* 模擬產品圖 */
+            background-image: url('yo.png'); 
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .hero-text {
+            flex: 1 1 400px;
+            padding-left: 3rem;
+        }
+
+        h1 {
+            color: var(--brand-primary);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            color: var(--brand-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--brand-primary);
+            color: var(--white);
+            padding: 10px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #003630;
+            transform: translateY(-2px);
+        }
+
+        /* --- 通用容器 --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--brand-primary);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--brand-secondary);
+            margin: 10px auto 0;
+        }
+
+        /* --- 菌種數據區 (Data Visualization) --- */
+        .bacteria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .bacteria-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--brand-secondary);
+            transition: transform 0.2s;
+        }
+
+        .bacteria-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .bacteria-name {
+            font-weight: bold;
+            color: var(--brand-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .bacteria-count {
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            font-family: monospace; /* 強調數據感 */
+        }
+
+        .bacteria-unit {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* --- 食用場景區 --- */
+        .usage-guide {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .scenario-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .scenario-item h4 {
+            color: var(--brand-primary);
+            margin-bottom: 10px;
+        }
+
+        /* --- 創意食譜區 --- */
+        .recipe-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .recipe-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .recipe-header {
+            background-color: var(--brand-primary);
+            color: var(--white);
+            padding: 1rem;
+            font-weight: bold;
+        }
+
+        .recipe-body {
+            padding: 1.5rem;
+        }
+
+        .recipe-step {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* --- Podcast 區 --- */
+        .podcast-section {
+            background-color: #1a1a1a; /* Spotify 風格深色底 */
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 3rem;
+        }
+
+        .podcast-player {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #282828;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .play-btn {
+            width: 50px;
+            height: 50px;
+            background-color: #1DB954; /* Spotify Green */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .play-icon {
+            width: 0; 
+            height: 0; 
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 14px solid white;
+            margin-left: 4px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--brand-primary);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text { padding-left: 0; margin-top: 2rem; }
+            .hero-img { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Matthew's Choice</div>
+        <!-- <div>
+            <a href="#" style="color:white; text-decoration:none; margin-left: 20px;">產品</a>
+            <a href="#" style="color:white; text-decoration:none; margin-left: 20px;">門市</a>
+            <a href="#" style="color:white; text-decoration:none; margin-left: 20px;">會員</a>
+        </div> -->
+    </nav>
+
+    <section class="hero">
+        <div class="hero-img"></div>
+        <div class="hero-text">
+            <h1>原味優格 G+ Plus</h1>
+            <div class="tagline">純淨無糖．專為亞洲人腸道設計</div>
+            <p style="margin-bottom: 20px; color: var(--text-light);">
+                嚴選新鮮鮮乳與獨家菌種發酵，口感綿密細緻。每一口都是對身體的溫柔呵護，不僅是優格，更是生活的純粹儀式。
+            </p>
+            <a href="#" class="btn">再次訂購</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">科學配方．獨家菌種</h2>
+        <div id="bacteria-container" class="bacteria-grid">
+            </div>
+        <p style="text-align: center; margin-top: 15px; font-size: 0.8rem; color: #999;">
+            *菌數為出廠時每100g之平均檢測值
+        </p>
+    </div>
+
+    <div class="container" style="background-color: #fff;">
+        <h2 class="section-title">建議食用指南</h2>
+        <div class="usage-guide">
+            <ul class="scenario-list">
+                <li class="scenario-item">
+                    <h4>🌅 晨間喚醒</h4>
+                    <p>空腹或早餐後食用 <strong>200g</strong>。搭配溫水，幫助啟動整天的消化代謝。</p>
+                </li>
+                <li class="scenario-item">
+                    <h4>🏋️ 運動補給</h4>
+                    <p>運動後 30 分鐘內食用 <strong>250g</strong>。補充優質乳蛋白，修復肌肉組織。</p>
+                </li>
+                <li class="scenario-item">
+                    <h4>🌙 晚間輕食</h4>
+                    <p>晚餐減半，以 <strong>150g</strong> 優格替代。減輕腸胃負擔，幫助夜間菌叢重整。</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">優格生活．創意提案</h2>
+        <div id="recipe-container" class="recipe-container">
+            </div>
+    </div>
+
+    <div class="container">
+        <div class="podcast-section">
+            <h2 style="color: white; margin-bottom: 10px;">馬修嚴選 on Air</h2>
+            <p style="margin-bottom: 30px; opacity: 0.8;">聆聽品牌創辦人的堅持，與優格的聲音對話。</p>
+            
+            <div class="podcast-player">
+                <div class="play-btn"><div class="play-icon"></div></div>
+                <div style="text-align: left; flex-grow: 1;">
+                    <div style="font-size: 0.8rem; color: #1DB954;">NOW PLAYING</div>
+                    <div style="font-weight: bold; margin: 5px 0;">EP.12 為什麼我們堅持無糖？從味蕾找回健康的初衷</div>
+                    <div style="font-size: 0.9rem; opacity: 0.7;">Matthew's Choice Podcast</div>
+                </div>
+                <div style="font-family: monospace; opacity: 0.7;">14:20</div>
+            </div>
+            
+            <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.5;">*實際整合可串接 Spotify / Apple Podcast iframe API</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Matthew's Choice 馬修嚴選. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // --- 模擬後端資料 (Data Layer) ---
+        
+        // 1. 菌種資料
+        const bacteriaData = [
+            { name: "嗜熱鏈球菌 (S. thermophilus)", count: "300", unit: "億 CFU" },
+            { name: "嗜酸乳桿菌 (L. acidophilus)", count: "150", unit: "億 CFU" },
+            { name: "長雙歧桿菌 (B. longum)", count: "80", unit: "億 CFU" },
+            { name: "鼠李糖乳桿菌 (LGG)", count: "50", unit: "億 CFU" }
+        ];
+
+        // 2. 食譜資料
+        const recipeData = [
+            {
+                title: "蜂蜜堅果優格碗",
+                steps: [
+                    "1. 取 200g G+ 優格放入碗中。",
+                    "2. 鋪上馬修嚴選烤燕麥 2 湯匙。",
+                    "3. 淋上一圈龍眼蜂蜜。",
+                    "4. 點綴藍莓或季節水果即可。"
+                ]
+            },
+            {
+                title: "清爽優格凱薩醬",
+                steps: [
+                    "1. 優格 100g 混合蒜末與少許檸檬汁。",
+                    "2. 加入少許黑胡椒與海鹽調味。",
+                    "3. 淋在雞胸肉沙拉上。",
+                    "4. 比傳統美乃滋熱量降低 70%。"
+                ]
+            },
+            {
+                title: "優格能量飲 (Smoothie)",
+                steps: [
+                    "1. 優格 150g + 香蕉半根 + 蛋白粉。",
+                    "2. 加入少許冰塊。",
+                    "3. 放入果汁機攪拌均勻。",
+                    "4. 適合運動後快速補充。"
+                ]
+            }
+        ];
+
+        // --- 渲染邏輯 (View Layer) ---
+
+        // 渲染菌種卡片
+        const bacteriaContainer = document.getElementById('bacteria-container');
+        bacteriaData.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'bacteria-card';
+            card.innerHTML = `
+                <div class="bacteria-name">${item.name}</div>
+                <div>
+                    <span class="bacteria-count">${item.count}</span>
+                    <span class="bacteria-unit">${item.unit}</span>
+                </div>
+            `;
+            bacteriaContainer.appendChild(card);
+        });
+
+        // 渲染食譜卡片
+        const recipeContainer = document.getElementById('recipe-container');
+        recipeData.forEach(recipe => {
+            const card = document.createElement('div');
+            card.className = 'recipe-card';
+            
+            // 處理步驟 HTML
+            const stepsHtml = recipe.steps.map(step => `<div class="recipe-step">${step}</div>`).join('');
+
+            card.innerHTML = `
+                <div class="recipe-header">${recipe.title}</div>
+                <div class="recipe-body">
+                    ${stepsHtml}
+                </div>
+            `;
+            recipeContainer.appendChild(card);
+        });
+    </script>
+
+</body>
+</html>
